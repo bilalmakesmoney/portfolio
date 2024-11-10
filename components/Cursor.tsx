@@ -10,7 +10,7 @@ interface CursorProps {
   setIsMask: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Cursor: React.FC<CursorProps> = ({ isMask, setIsMask }) => {
+const Cursor: React.FC<CursorProps> = ({ isMask }) => {
   // Add typing to refs
   const cursorRef = useRef<HTMLDivElement | null>(null);
   const innerCursorRef = useRef<HTMLDivElement | null>(null);
