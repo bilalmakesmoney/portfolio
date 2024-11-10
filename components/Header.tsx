@@ -70,7 +70,7 @@ const Header: React.FC<HeroProps> = ({
               onMouseEnter={linkEnter}
               onMouseLeave={linkLeave}
               className={`py-2.5 px-4 rounded-full cursor-pointer transition-all duration-300 ease-linear 
-                border border-white hover:bg-[#fff] hover:text-[#0e1015] text-center`}
+                border border-white hover:bg-[#fff] hover:text-[#0e1015] text-center hidden md:block`}
             >
               {text.name}
             </a>
