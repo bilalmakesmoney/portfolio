@@ -23,7 +23,8 @@ const Work: React.FC<HeroProps> = ({
         My <span className="highlight">Work</span>😇
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 my-16">
-        <div className="border-[0.5px] border-[#ffffff44] bg-[#181a20] rounded-t-2xl rounded-b-md">
+        {/* Project 1 */}
+        <div className="border-[0.5px] border-[#ffffff44] bg-[#181a20] rounded-t-2xl rounded-b-md overflow-hidden">
           <a
             href="https://neura-tan.vercel.app"
             target="_blank"
@@ -33,10 +34,11 @@ const Work: React.FC<HeroProps> = ({
               onMouseEnter={linkEnter}
               onMouseLeave={linkLeave}
               src="/project1.png"
+              alt="Neura Project"
+              layout="intrinsic" // Ensures natural aspect ratio
               width={500}
-              height={500}
-              alt="project"
-              className="rounded-2xl object-fill w-full h-full"
+              height={300}
+              className="rounded-t-2xl"
             />
           </a>
           <h1
@@ -47,7 +49,8 @@ const Work: React.FC<HeroProps> = ({
             Neura1
           </h1>
         </div>
-        <div className="border-[0.5px] border-[#ffffff44] bg-[#181a20] rounded-t-2xl rounded-b-md">
+        {/* Project 2 */}
+        <div className="border-[0.5px] border-[#ffffff44] bg-[#181a20] rounded-t-2xl rounded-b-md overflow-hidden">
           <a
             href="https://treatzy.vercel.app"
             target="_blank"
@@ -57,10 +60,11 @@ const Work: React.FC<HeroProps> = ({
               onMouseEnter={linkEnter}
               onMouseLeave={linkLeave}
               src="/project2.png"
+              alt="Treatzy Project"
+              layout="intrinsic"
               width={500}
-              height={500}
-              alt="project"
-              className="rounded-2xl object-fill w-full h-full"
+              height={300}
+              className="rounded-t-2xl"
             />
           </a>
           <h1
@@ -71,7 +75,8 @@ const Work: React.FC<HeroProps> = ({
             Treatzy
           </h1>
         </div>
-        <div className="border-[0.5px] border-[#ffffff44] bg-[#181a20] rounded-t-2xl rounded-b-md">
+        {/* Project 3 */}
+        <div className="border-[0.5px] border-[#ffffff44] bg-[#181a20] rounded-t-2xl rounded-b-md overflow-hidden">
           <a
             href="https://foody-psi-six.vercel.app"
             target="_blank"
@@ -81,10 +86,11 @@ const Work: React.FC<HeroProps> = ({
               onMouseEnter={linkEnter}
               onMouseLeave={linkLeave}
               src="/project3.png"
+              alt="Foody Project"
+              layout="intrinsic"
               width={500}
-              height={500}
-              alt="project"
-              className="rounded-2xl object-fill w-full h-full"
+              height={300}
+              className="rounded-t-2xl"
             />
           </a>
           <h1
