@@ -36,7 +36,7 @@ const Work: React.FC<HeroProps> = ({
               width={500}
               height={500}
               alt="project"
-              className="rounded-2xl object-cover w-full h-full"
+              className="rounded-2xl object-fill w-full h-full"
             />
           </a>
           <h1
@@ -60,7 +60,7 @@ const Work: React.FC<HeroProps> = ({
               width={500}
               height={500}
               alt="project"
-              className="rounded-2xl object-cover w-full h-full"
+              className="rounded-2xl object-fill w-full h-full"
             />
           </a>
           <h1
@@ -69,6 +69,30 @@ const Work: React.FC<HeroProps> = ({
             onMouseLeave={textLeave}
           >
             Treatzy
+          </h1>
+        </div>
+        <div className="border-[0.5px] border-[#ffffff44] bg-[#181a20] rounded-t-2xl rounded-b-md">
+          <a
+            href="https://foody-psi-six.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              onMouseEnter={linkEnter}
+              onMouseLeave={linkLeave}
+              src="/project3.png"
+              width={500}
+              height={500}
+              alt="project"
+              className="rounded-2xl object-fill w-full h-full"
+            />
+          </a>
+          <h1
+            className="text-lg sm:text-xl font-semibold text-center my-3"
+            onMouseEnter={textEnter}
+            onMouseLeave={textLeave}
+          >
+            Foody
           </h1>
         </div>
       </div>
