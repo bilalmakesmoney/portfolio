@@ -31,7 +31,9 @@ const Work: React.FC<HeroProps> = ({ textEnter, textLeave }) => {
         My <span className="highlight">Work</span> 😇
       </h1>
 
-      <p>Hover/Click to Reveal!</p>
+      <p className="text-center text-sm sm:text-md mb-6 xl:mb-0">
+        Hover/Click to Reveal!
+      </p>
 
       <div className="relative w-full h-auto xl:h-[700px] flex flex-col 2xl:block items-center gap-6">
         {images.map((src, index) => (
