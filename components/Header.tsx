@@ -26,7 +26,7 @@ const Header: React.FC<HeroProps> = ({
       to: "why-us", // Replace with actual section IDs
     },
     {
-      name: "Work",
+      name: "My Work",
       to: "work", // Replace with actual section IDs
     },
     {

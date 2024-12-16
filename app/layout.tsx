@@ -16,7 +16,14 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title:
     "bilalcodes | Showcasing creative, user-focused web solutions. Let’s bring your ideas to life!",
-  description: "",
+  description:
+    "A portfolio showcasing innovative and user-friendly web designs.",
+  icons: {
+    icon: [
+      "/favicon.ico", // Primary favicon for compatibility
+      "/favicon.png?v=4", // Optional PNG version
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -26,6 +33,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Ensure favicon links are included for compatibility */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/favicon.png?v=4" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

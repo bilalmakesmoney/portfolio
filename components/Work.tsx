@@ -1,4 +1,9 @@
 import Image from "next/image";
+import image1 from "@/public/project-1.png";
+import image2 from "@/public/project-2.png";
+import image3 from "@/public/project-3.png";
+import image4 from "@/public/project-4.png";
+import image5 from "@/public/project-5.png";
 
 interface HeroProps {
   textEnter: () => void;
@@ -7,100 +12,45 @@ interface HeroProps {
   linkLeave: () => void;
 }
 
-const Work: React.FC<HeroProps> = ({
-  textEnter,
-  textLeave,
-  linkEnter,
-  linkLeave,
-}) => {
+const images = [image1, image2, image3, image4, image5];
+
+const positions = [
+  { top: "10%", left: "10%" },
+  { top: "20%", left: "30%" },
+  { top: "30%", left: "6%" },
+  { top: "40%", left: "59%" },
+  { top: "48%", left: "40%" },
+];
+
+const Work: React.FC<HeroProps> = ({ textEnter, textLeave }) => {
   return (
-    <div className="work px-4 sm:px-8 md:px-16 lg:px-40 py-10 w-full flex flex-col items-center">
+    <div className="work relative xl:px-16 py-10 w-full flex flex-col items-center cursor-pointer">
       <h1
-        className="font-extrabold text-[32px] sm:text-[40px] md:text-[48px] text-center"
+        className="font-extrabold text-[32px] sm:text-[40px] md:text-[48px] text-center mb-10"
         onMouseEnter={textEnter}
         onMouseLeave={textLeave}
       >
-        My <span className="highlight">Work</span>😇
+        My <span className="highlight">Work</span> 😇
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 my-16">
-        {/* Project 1 */}
-        <div className="border-[0.5px] border-[#ffffff44] bg-[#181a20] rounded-t-2xl rounded-b-md overflow-hidden">
-          <a
-            href="https://neura-tan.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              onMouseEnter={linkEnter}
-              onMouseLeave={linkLeave}
-              src="/project1.png"
-              alt="Neura Project"
-              layout="intrinsic" // Ensures natural aspect ratio
-              width={500}
-              height={300}
-              className="rounded-t-2xl"
-            />
-          </a>
-          <h1
-            className="text-lg sm:text-xl font-semibold text-center my-3"
+
+      <div className="relative w-full h-auto xl:h-[700px] flex flex-col 2xl:block items-center gap-6">
+        {images.map((src, index) => (
+          <Image
+            key={index}
+            src={src}
+            alt={`work-${index}`}
+            width={250}
+            height={250}
+            className="w-[300px] sm:w-[350px] lg:w-[450px] blur-[5px] transition-all duration-300 hover:blur-none hover:scale-110 hover:z-50 xl:absolute"
+            style={
+              index < positions.length
+                ? { top: positions[index].top, left: positions[index].left }
+                : {}
+            }
             onMouseEnter={textEnter}
             onMouseLeave={textLeave}
-          >
-            Neura1
-          </h1>
-        </div>
-        {/* Project 2 */}
-        <div className="border-[0.5px] border-[#ffffff44] bg-[#181a20] rounded-t-2xl rounded-b-md overflow-hidden">
-          <a
-            href="https://treatzy.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              onMouseEnter={linkEnter}
-              onMouseLeave={linkLeave}
-              src="/project2.png"
-              alt="Treatzy Project"
-              layout="intrinsic"
-              width={500}
-              height={300}
-              className="rounded-t-2xl"
-            />
-          </a>
-          <h1
-            className="text-lg sm:text-xl font-semibold text-center my-3"
-            onMouseEnter={textEnter}
-            onMouseLeave={textLeave}
-          >
-            Treatzy
-          </h1>
-        </div>
-        {/* Project 3 */}
-        <div className="border-[0.5px] border-[#ffffff44] bg-[#181a20] rounded-t-2xl rounded-b-md overflow-hidden">
-          <a
-            href="https://foody-psi-six.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              onMouseEnter={linkEnter}
-              onMouseLeave={linkLeave}
-              src="/project3.png"
-              alt="Foody Project"
-              layout="intrinsic"
-              width={500}
-              height={300}
-              className="rounded-t-2xl"
-            />
-          </a>
-          <h1
-            className="text-lg sm:text-xl font-semibold text-center my-3"
-            onMouseEnter={textEnter}
-            onMouseLeave={textLeave}
-          >
-            Foody
-          </h1>
-        </div>
+          />
+        ))}
       </div>
     </div>
   );

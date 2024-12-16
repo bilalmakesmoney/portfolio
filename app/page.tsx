@@ -16,7 +16,7 @@ const Home = () => {
   const linkEnter = () => setIsMask("link");
   const linkLeave = () => setIsMask("default");
   return (
-    <div>
+    <div className="w-screen min-h-screen">
       <Header
         textEnter={textEnter}
         textLeave={textLeave}
@@ -31,12 +31,7 @@ const Home = () => {
       />
       <You textEnter={textEnter} textLeave={textLeave} />
       <Whyus textEnter={textEnter} textLeave={textLeave} />
-      <Work
-        textEnter={textEnter}
-        textLeave={textLeave}
-        linkEnter={linkEnter}
-        linkLeave={linkLeave}
-      />
+      <Work textEnter={textEnter} textLeave={textLeave} />
       <Footer
         textEnter={textEnter}
         textLeave={textLeave}
