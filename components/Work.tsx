@@ -8,8 +8,6 @@ import image5 from "@/public/project-5.png";
 interface HeroProps {
   textEnter: () => void;
   textLeave: () => void;
-  linkEnter: () => void;
-  linkLeave: () => void;
 }
 
 const images = [image1, image2, image3, image4, image5];
