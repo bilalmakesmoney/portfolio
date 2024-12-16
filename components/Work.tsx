@@ -24,12 +24,14 @@ const Work: React.FC<HeroProps> = ({ textEnter, textLeave }) => {
   return (
     <div className="work relative xl:px-16 py-10 w-full flex flex-col items-center cursor-pointer">
       <h1
-        className="font-extrabold text-[32px] sm:text-[40px] md:text-[48px] text-center mb-10"
+        className="font-extrabold text-[32px] sm:text-[40px] md:text-[48px] text-center mb-6 xl:mb-0"
         onMouseEnter={textEnter}
         onMouseLeave={textLeave}
       >
         My <span className="highlight">Work</span> 😇
       </h1>
+
+      <p>Hover/Click to Reveal!</p>
 
       <div className="relative w-full h-auto xl:h-[700px] flex flex-col 2xl:block items-center gap-6">
         {images.map((src, index) => (
