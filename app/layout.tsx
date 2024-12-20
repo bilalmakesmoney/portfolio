@@ -15,7 +15,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title:
-    "bilalcodes | Showcasing creative, user-focused web solutions. Let’s bring your ideas to life!",
+    "Bilalmakesmoney | Showcasing creative, user-focused web solutions. Let’s bring your ideas to life!",
   description:
     "A portfolio showcasing innovative and user-friendly web designs.",
   icons: {

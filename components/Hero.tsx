@@ -42,7 +42,7 @@ const Hero: React.FC<HeroProps> = ({
         graphics, and seamless user experiences.
       </p>
       <a
-        href="https://x.com/Bilal1864255/"
+        href="https://x.com/bilalmakesmoney"
         target="_blank"
         rel="noopener noreferrer"
         className="py-2.5 mt-4 px-6 sm:px-8 rounded-full border border-white hover:bg-[#fff] hover:text-[#0e1015] transition-all ease-linear cursor-pointer"

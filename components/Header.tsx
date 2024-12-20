@@ -64,7 +64,7 @@ const Header: React.FC<HeroProps> = ({
         >
           {text.name === "Contact" ? (
             <a
-              href="https://x.com/Bilal1864255/"
+              href="https://x.com/bilalmakesmoney/"
               target="_blank"
               rel="noopener noreferrer"
               onMouseEnter={linkEnter}

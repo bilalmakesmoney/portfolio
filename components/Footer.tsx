@@ -29,7 +29,7 @@ const Footer: React.FC<HeroProps> = ({
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://x.com/Bilal1864255/"
+          href="https://x.com/bilalmakesmoney"
           onMouseEnter={linkEnter}
           onMouseLeave={linkLeave}
         >
